@@ -6,3 +6,126 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+
+body{
+    background: #2d2c3e;
+}
+
+.app-container{
+    padding: 20px 20px 20px 20px;
+    width:340px;
+    background: #1e1b2e;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+
+.app-container .app-title {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+.app-container .option-bar
+{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.app-container .option-bar button{
+    all: unset;
+    height: 40px;
+    width: 85px;
+    color: white;
+    background-color: #422f66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    float: left;
+    margin-left: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.app-container .option-bar button.active{
+    background: #7d59c1;
+}
+
+.app-container .timer{
+    height: 220px;
+    width: 220px;
+    background: conic-gradient(#664efe 360deg, #422f66 0deg);
+    border-radius: 100%;
+    margin: 30px auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%{
+        transform:scale(0.97);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.97);
+    }
+
+}
+
+.app-container .timer .timer-inner{
+    height: 200px;
+    width: 200px;
+    background: #1e1b2e;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 35px;
+}
+
+.app-container .pause-setting-bar{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.app-container .pause-setting-bar button{
+    all: unset;
+    height: 40px;
+    width: 100px;
+    color: white;
+    background-color: #422f66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    float: left;
+    margin-left: 12px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.app-container .pause-setting-bar #reset-button{
+    position: absolute;
+    right: 30px;
+}
+
+.app-container .pause-setting-bar #stop-button{
+    display: none;
+}
+
+
+
