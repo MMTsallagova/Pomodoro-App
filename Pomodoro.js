@@ -31,6 +31,9 @@ function getType (elem, type){
     resetTimer();
 }
 function resetTimer () {
+    clearInterval(progressInterval);
+    startButton.style.display = "block";
+    stopButton.style.display = "none";
     if (timerType === "Pomodoro"){
         timerValue = pomodoroTimeInSec;
     }
@@ -46,7 +49,6 @@ function resetTimer () {
 }
 let FormatedNumberInMinutes =(number) =>
 {
-
     let minutes = Math.trunc( number/60).toString().padStart(2, '0');
     let seconds = Math.trunc(number % 60).toString().padStart(2, '0');
     return `${minutes} : ${seconds}`;
@@ -74,7 +76,7 @@ let stopTimer =() =>
 }
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
-
+resetButton.addEventListener("click", resetTimer)
 
 document.querySelector("#Pomodoro-button").addEventListener("click", function () {
     getType(this, timer_type_pomodoro);
