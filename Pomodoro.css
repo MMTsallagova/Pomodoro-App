@@ -62,7 +62,7 @@ body{
     width: 220px;
     background: conic-gradient(#664efe 360deg, #422f66 0deg);
     border-radius: 100%;
-    margin: 30px auto auto;
+    margin: 30px auto 30px;
     display: flex;
     align-items: center;
     justify-content: center;
